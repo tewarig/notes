@@ -6,69 +6,56 @@
 
 # stack impelmentation using class in js
 
-```javaScript
+```js
+class Stack {
+  count = 0;
+  storage = {};
 
-class Stack{
-   count = 0;
-   storage = {};
-
-   push = (value) => {
-   this.storage[this.count] = value;
-   this.count++;
-  }
+  push = (value) => {
+    this.storage[this.count] = value;
+    this.count++;
+  };
   pop = () => {
-   if(this.count === 0){
-     return undefined;
+    if (this.count === 0) {
+      return undefined;
     }
-   this.count --;
-   var result = this.storage[this.count];
-   delete this.storage[this.count];
-   return result;
-
- }
+    this.count--;
+    var result = this.storage[this.count];
+    delete this.storage[this.count];
+    return result;
+  };
   size = () => {
-  return this.count;
- }
- peek = () => {
-   return this.storage[this.count -1];
- }
-
-
-
-
-
+    return this.count;
+  };
+  peek = () => {
+    return this.storage[this.count - 1];
+  };
 }
-
 
 var mystack = new Stack();
 mystack.push(1);
 mystack.push(2);
 console.log(mystack.pop());
 console.log(mystack.peek());
-
 ```
 
 # Question
 
 how to check a number is a pallandrome or now in js?
 
-```javaScript
+```js
 let letters = [];
 var words = "level";
 
 var reverseWords = "";
 
-for(let i=0;i<words.length;i++)
-{
- letters.push(words[i]);
+for (let i = 0; i < words.length; i++) {
+  letters.push(words[i]);
 }
-for(let j=0;j<words.length;j++)
-{
+for (let j = 0; j < words.length; j++) {
   reverseWords += letters.pop();
 }
-if(reverseWords === words){
-  console.log(words+"is a pallandrome");
-
+if (reverseWords === words) {
+  console.log(words + "is a pallandrome");
 }
-
 ```
