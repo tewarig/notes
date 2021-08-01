@@ -32,4 +32,5 @@ to check the size.
 
 mySet.delete(3);
 to delete it : )
+//just like your ex deleted your number
 ```
