@@ -5,7 +5,6 @@ well i prirority queue also takes a number which is the priority of that number 
 
 ```js
 
-
 class PQueue{
 
    class PQueue{
@@ -25,7 +24,7 @@ class PQueue{
             let isAdded = false;
             for(let i=0;i<this.collection.length;i++)
             {
-                if(element[1]<this.collection[i][i]){
+                if(element[1]<this.collection[i][1]){
                     this.collection.splice(i,0,element);
                     isAdded = true;
                     break;
@@ -56,8 +55,8 @@ class PQueue{
 }
 
 let pqueue = new PQueue();
-pqueue.enqueue(['Gaurav',5]);
 pqueue.enqueue(['Tewari',1]);
+pqueue.enqueue(['Gaurav',5]);
 pqueue.print();
 console.log(pqueue.isEmpty());
 pqueue.enqueue(['js',10]);
@@ -66,10 +65,6 @@ pqueue.print();
 ```
 
 ```js
-[
-  ["Gaurav", 5],
-  ["Tewari", 1],
-];
-
-(0)[(["Gaurav", 5], ["Tewari", 1], ["js", 10])];
+[(["Tewari", 1], ["Gaurav", 5])];
+(0)[(["Tewari", 1], ["test", 1], ["Gaurav", 5], ["js", 10])];
 ```
