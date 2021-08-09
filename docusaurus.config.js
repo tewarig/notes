@@ -3,8 +3,8 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  title: 'I have an interview tommorow',
-  tagline: 'A complete interview prep guide for javascript developers',
+  title: 'Ohioo!',
+  tagline: 'A complete collection of notes by me :)',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
