@@ -52,3 +52,56 @@ x();
 ```
 
 now it will create a new copy of i itslef :)
+
+example of closure
+
+```
+function outer(){
+   var a = 10;
+    function inner(){
+     console.log(a);
+    }
+    return inner;
+}
+
+//what are these for?
+outer()();
+
+//another way to do it
+var close = outer();
+close();
+
+```
+
+()() call the inner function :)
+
+- how this will behave with argument ?
+
+```
+the parameter will form closer with the parameter as well :)
+```
+
+# disadvange ??
+
+it can consume a lot of meomory as it is not garbage collected till the program expire.
+
+if not handled properly it can lead to meomory leak.
+
+# grabage collector
+
+in browser/engine
+the garbage collector will free the untilize space in the memory.
+
+whever their is un used variable it will free up the meomory.
+
+Relation b/w garbage collector and function ?
+
+```js
+function a() {
+  var x = 0;
+  return function b() {
+    console.log(x);
+  };
+}
+var y = a();
+```
