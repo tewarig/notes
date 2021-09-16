@@ -51,4 +51,48 @@ console.log(calculate(radius, circumcenter));
 console.log(radius.map(area));
 
 // how to add this function as a prototype  ??
+ Array.prototype.calculate =
+
+
+```
+
+# Map
+
+map is used to tranform an array and get a new value out of it.
+
+# filter
+
+filter function is basically used to filter ;)
+
+```js
+const arr = [1, 2, 3, 4, 5];
+function isOdd(x) {
+  return x % 2;
+}
+const output = arr.filter(isOdd);
+console.log(output);
+```
+
+# reduce
+
+it does not reduce anything
+
+take aaray and reduce it to a simple thing
+
+```js
+const output = arr.reduce(function (acc, curr) {
+  acc = acc + curr;
+  return acc;
+}, 0);
+```
+
+- how to find max using reduce
+
+```js
+const output = arr.reduce(function (max, curr) {
+  if (curr > max) {
+    max = curr;
+  }
+  return max;
+}, 0);
 ```
