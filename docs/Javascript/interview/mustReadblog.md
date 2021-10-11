@@ -1,2 +1,2 @@
 # this part contains must read blog of from the list
-https://app.shortcut.com/trell/story/21160/pin-previously-search-term-on-search-bar
+https://dmitripavlutin.com/dont-overuse-react-usecallback/#2-the-purpose-of-usecallback
