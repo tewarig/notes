@@ -60,7 +60,36 @@ main(){
  ```
  ```
  output
- 
+
   gauravtewari@Gauravs-MacBook-Air  ~/Desktop/os/fork  ./a.out                                                                                                                         ✔  534  21:36:05
 today is fridaytoday is friday%                                                                                                                                                                              
  ```
+
+ main system call will print first after that the child call call would print it
+ output
+ ```
+meow meow it works 
+today is friday 
+today is 22 oct 
+today is friday 
+today is 22 oct 
+today is 22 oct 
+today is 22 oct 
+ ```
+
+
+# Parent Process Computes the SUM OF EVEN and Child Process Computes the sum of ODD NUMBERS using fork
+
+```c
+#include<stdio.h>
+//for using the fork 
+#include<unistd.h>
+//for exit function
+#include<stdlib.h>
+//to call states of particular processs
+#include<sys/types.h>
+#include<sys/wait.h>
+//this limits and interger array
+#define 20
+ 
+```
