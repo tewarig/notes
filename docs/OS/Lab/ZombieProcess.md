@@ -25,3 +25,6 @@ to check the process
 ```
 ps -e -o pid,stat                                             
 ```
+
+how to resovle a zombie process ??
+just add wait(NULL) before the sleep 
