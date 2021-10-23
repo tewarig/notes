@@ -80,6 +80,9 @@ today is 22 oct
 
 # Parent Process Computes the SUM OF EVEN and Child Process Computes the sum of ODD NUMBERS using fork
 
+
+- this program does  not work check another  the another program
+
 ```c
 #include<stdio.h>
 //for using the fork 
@@ -89,7 +92,86 @@ today is 22 oct
 //to call states of particular processs
 #include<sys/types.h>
 #include<sys/wait.h>
+
+
 //this limits and interger array
-#define 20
+#define max 20
  
+ int main(){
+    //  to store the process id
+    //this will store the process id 
+     int pid; 
+     int a[max],n,sum=0,i,status;
+     scanf("%d",&n);
+     printf("enter the values in an array\n");
+     for(i=0;i<n;i++){
+         scanf("%d",&a[i]);
+         pid = fork();
+         //this will put the parent program on hold untill the child process is completed
+         wait(&status);
+        // pid zero means the child process has been created
+         if(pid == 0){
+          for(i=0;i<n;i++){
+              if(a[i]%2 == 0){
+                  sum += a[i];
+              }
+          }
+                  printf("sum of even places %d\n", sum);
+              
+          }
+          exit(0);
+         }else{
+              for(i=0;i<n;i++){
+              if(a[i]%2 != 0){
+                  sum += a[i];
+              }
+             printf("sum of even places %d\n", sum);
+
+          }
+          exit(0);
+         }
+     }
+     return 0;
+ }
+```
+
+```c
+// for standard input and output
+#include <stdio.h>
+ // for the system calls
+ #include <unistd.h>
+ #define max 20
+
+ int main(){
+     int a[max],n,i ,sumEven = 0, sumOdd = 0 , m;
+     printf("enter the size of array\n");
+     scanf("%d",&n);
+     printf("enter the array elements\n");
+     for(i=0;i<n;i++){
+         scanf("%d",&a[i]);
+     }
+   
+     m = fork();
+     if(m>0){
+         for(i=0;i<n;i++){
+             
+             if(a[i]%2 == 0){
+             sumEven += a[i];
+             }
+         }
+         printf("parent process \n");
+         printf("sum of Even %d \n",sumEven);
+     }else{
+         for(i=0;i<n;i++){
+             if(a[i]%2 != 0){
+             sumOdd +=a[i];
+             }
+
+         }
+         printf("child process \n");
+         printf(" sum of odd %d \n" , sumOdd);
+
+     }
+   return 0;
+ }
 ```
