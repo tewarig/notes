@@ -21,3 +21,4 @@
 - Creating virtual connection among the processes , user and computer systems.
 - Allowing the user to send messages to another's screen.
 - to browse webpage
+- to send emails
