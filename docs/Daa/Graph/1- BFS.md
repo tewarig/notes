@@ -1,9 +1,9 @@
 # Graph Representation
 - [Basic Of Graph](https://geuac-my.sharepoint.com/:b:/g/personal/19021621_geu_ac_in/Edv3Uwa4HUFEr0jZCSz6IJ4BSnHGuECcLZXuC5nhnACIJQ?e=a8Q9I6)
-- [Graph Representation - Theroy](https://geuac-my.sharepoint.com/:b:/g/personal/19021621_geu_ac_in/EUBxdzf1p9BMiw97lw-FtlABHI1z9QwHVV3-zrKqJmtlDQ?e=7sVwnQ)
+- [Graph Representation - Theroy notes](https://geuac-my.sharepoint.com/:b:/g/personal/19021621_geu_ac_in/EUBxdzf1p9BMiw97lw-FtlABHI1z9QwHVV3-zrKqJmtlDQ?e=7sVwnQ)
 
 Adjacency Array 
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -44,10 +44,10 @@ int main(){
 */
 ```
 
-# [Bfs](https://geuac-my.sharepoint.com/:b:/g/personal/19021621_geu_ac_in/EXUgdc9nUHxGgo9Ot3pjIx8BLqmHQvYQPcFp3XaUR2VOWQ?e=QSmW49)
+# [Bfs notes](https://geuac-my.sharepoint.com/:b:/g/personal/19021621_geu_ac_in/EXUgdc9nUHxGgo9Ot3pjIx8BLqmHQvYQPcFp3XaUR2VOWQ?e=QSmW49)
 # BFS basics 
 
-```c++
+```cpp
 #include<bits/stdc++.h>
 using namespace std;
 
@@ -98,7 +98,7 @@ int main(){
 ```
 
 # BFS FOR Non Connected Graph
-```c++
+```cpp
 #include<bits/stdc++.h> 
 using namespace std; 
 
@@ -159,7 +159,7 @@ int main()
 
 ```
 # Bfs for Connected Components
-```c++
+```cpp
 #include<bits/stdc++.h> 
 using namespace std; 
 
