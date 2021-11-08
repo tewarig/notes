@@ -1,5 +1,7 @@
 # Shortes Path in bfs
--[Notes]()
+
+
+-[Notes]('https://google.com')
 ```cpp
 #include<bits/stdc++.h>
 using namespace std;
