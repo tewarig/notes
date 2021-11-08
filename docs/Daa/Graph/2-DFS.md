@@ -1,6 +1,6 @@
 # DFS
 
-[DFS theory notes](https://geuac-my.sharepoint.com/:b:/g/personal/19021621_geu_ac_in/EaI8VYG9HFpOvNZB_yhgs38BXZ-Suj9gOTmCnPkOiNCxlg?e=Nxv01E)
+[DFS theory notesls](https://geuac-my.sharepoint.com/:b:/g/personal/19021621_geu_ac_in/EaI8VYG9HFpOvNZB_yhgs38BXZ-Suj9gOTmCnPkOiNCxlg?e=Nxv01E)
 
 ```cpp
 #include<bits/stdc++.h>
