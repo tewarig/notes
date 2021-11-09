@@ -1,20 +1,15 @@
-# fifo
-Fist in first out
-take a arrray in and output the whole array :)
+# Shortest Job First
+here we just need to print the process with the shortest time first.
 
-# Important Terms
-- Arrival time: time at which process arrives in a queue.
-- Avg waiting is the time till when a call remains in the queue utill it is executed. also known as avg decay.
-- Completion Time: When a process starts executing
-- Turn around Time: difference b/w completion time and arrival time.
-- Waiting Time: difference b/w turn around time and arrival time.
+- just use the fifo program and implement sorting as well this will get the job done :)
 ```c
 # include <stdio.h>
-
+# include <string.h>
 int main(){
     int process[10];
     int processTime[10];
     char processName[10][5];
+    char temp[5];
     int turnAroundTime = 0;
     int avgTime = 0;
     int Time = 0;
@@ -26,6 +21,25 @@ int main(){
     scanf("%s",&processName[i]);
     printf("Enter the process time:\n");
     scanf("%d",&processTime[i]);
+    }
+    
+    for(int i=0;i<number-1;i++){
+        for(int j=i+1;j<number;j++){
+            if(processTime[i]>processTime[j]){
+                // to swap processes
+                int temp = processTime[i];
+                processTime[i] = processTime[j];
+                processTime[j] = temp;
+                
+                // to swap processes namespace
+                strcpy(temp,processName[i]);
+                strcpy(processName[i],processName[j]);
+                strcpy(processName[j],temp);
+
+                
+            }
+        }
+        
     }
     
     // to print the process
