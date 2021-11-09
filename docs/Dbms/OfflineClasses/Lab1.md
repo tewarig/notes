@@ -65,3 +65,9 @@ select * from employee where lastName like 'T%';
 # Extra 
 - Now add a primary key emp id in this table
 - print the details of emp getting more than avg salary of everyone
+
+
+- problem statment
+- concept
+- coding part / algo and flow chart
+- output
