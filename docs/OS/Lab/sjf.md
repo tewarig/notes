@@ -6,6 +6,7 @@ here we just need to print the process with the shortest time first.
 # include <stdio.h>
 # include <string.h>
 int main(){
+    // this program is under maintaince for now
     int process[10];
     int processTime[10];
     char processName[10][5];
