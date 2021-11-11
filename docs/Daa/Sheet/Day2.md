@@ -3,7 +3,10 @@
 # program 1
 - Algo used
  modified binary search
- ```cpp
+
+
+
+```cpp
  
 #include <iostream>
 using namespace std;
