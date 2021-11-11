@@ -3,7 +3,7 @@
 # program 1
 - Algo used
  modified binary search
- ```c++
+ ```cpp
  
 #include <iostream>
 using namespace std;
@@ -12,7 +12,7 @@ int firstOcuurance (int arr[],int size,int key){
   int start = 0;
   int end = size - 1;
   int firstOcuurance = -1;
-  while(start < end){
+  while(start <= end){
       int mid = (start + end)/2;
       if(arr[mid] == key){
           firstOcuurance = mid;
@@ -31,7 +31,7 @@ int lastOcuurace(int arr[],int size,int key){
     int start = 0;
     int end = size - 1;
     int lastOcuurace = -1;
-    while(start<end){
+    while(start<=end){
         int mid = (start + end)/2;
         if(arr[mid] == key){
             lastOcuurace = mid;
@@ -61,7 +61,9 @@ int main()
         }
         int keyElement;
         cin>>keyElement;
-     cout<< lastOcuurace(arr,arrSize,keyElement) - firstOcuurance(arr,arrSize,keyElement) + 1<<"\n";
+    
+    
+       cout<< lastOcuurace(arr,arrSize,keyElement) - firstOcuurance(arr,arrSize,keyElement) + 1<<"\n";
 
 
         
