@@ -193,3 +193,26 @@ int main(){
 }
 
 ``` 
+# Number of Swap in Selection Sort
+```cpp
+void selectionSort(int arr[],int arrSize){
+    int swapNumber = 0;
+    int comp = 0;
+    for(int index = 0;index<arrSize -1;index++){
+        int miniumNumber = index;
+        for(int index2 = index + 1;index2<arrSize;index2++){
+            comp++;
+            if(arr[miniumNumber] > arr[index2]){
+               miniumNumber = index2;
+            }
+        }
+        swap(arr[miniumNumber],arr[index]);
+        swapNumber++;
+       
+
+        
+    }
+    cout<<"swap:" << swapNumber<<"\n";
+    cout<<"Comp:"<<comp<<"\n";
+}
+```
