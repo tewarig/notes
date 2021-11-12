@@ -134,3 +134,62 @@ int peakElement(int arr[], int n)
         return -1;
     }
 ```
+
+# Insertion Sort
+Worst Case time complexity = O(n^2)
+Best Case = O(n)
+It take Big O(1) Space
+It is a stable algorithm
+Most efficient for small arrays
+
+- Here we insert an array in the sorted part and then we but that array in the sorted part and make that sorted part bigger :)
+
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+void insertionSort(int arr[],int n){
+    int comp = 0;
+    int shifts = 0;
+    for(int i=0;i<n;i++){
+        
+        int key = arr[i];
+        int j = i-1;
+        comp++;
+        
+        while(j>=0 && arr[j]>key){
+            arr[j+1] = arr[j];
+            j--;
+            comp++;
+            shifts++;
+        }
+        // if(arr[j+1] != key){
+        //   shifts++;   
+        // }
+        arr[j+1] = key;
+        shifts++;
+    }
+    cout<<"Swap:"<<shifts<<"\n";
+    cout<<"Comp:"<<comp<<"\n";
+}
+
+int main(){
+    // array size
+    int arrSize;
+    cin>>arrSize;
+    // array insertion
+    int arr[arrSize];
+    for(int index=0;index<arrSize;index++){
+        cin>>arr[index];
+    }
+    insertionSort(arr,arrSize);
+    for(int index=0;index<arrSize;index++){
+        cout<<arr[index]<<" ";
+    }
+    
+    
+
+    return 0;
+}
+
+``` 

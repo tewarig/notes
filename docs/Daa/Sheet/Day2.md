@@ -110,3 +110,34 @@ int main(){
     return 0;
 }
 ```
+// to pointer approach
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int arrSize;
+    cin>>arrSize;
+    int arr[arrSize];
+    unordered_set <int> s;
+    for(int index=0;index<arrSize;index++){
+        cin>>arr[index];
+    }
+    int sum;
+    cin>>sum;
+    int left = 0;
+    int right = arrSize - 1;
+    while(left<=right){
+        if(arr[left]+arr[right] == sum){
+            cout<<arr[left]<<" "<<arr[right]<<"\n";
+            break;
+        }else if(arr[left]+arr[right]>sum){
+            right --;
+        }else{
+            left++;
+        }
+    }
+
+    return 0;
+}
+```
