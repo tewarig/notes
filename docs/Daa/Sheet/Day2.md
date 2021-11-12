@@ -77,3 +77,36 @@ int main()
 }
 
  ```
+
+ # Program 2
+
+Find the sum of array with whose sum is eqaul to a given number
+```cpp
+#include<bits/stdc++.h>
+using namespace std;
+
+int main(){
+    int arrSize;
+    cin>>arrSize;
+    int arr[arrSize];
+    unordered_set <int> s;
+    for(int index=0;index<arrSize;index++){
+        cin>>arr[index];
+    }
+    int sum;
+    cin>>sum;
+    for(int index = 0;index<arrSize;index++){
+    
+      if(s.find(sum-arr[index]) != s.end()){
+           cout<<arr[index]<<" "<<sum - arr[index]<<"\n";
+      }else{
+         s.insert(arr[index]);
+
+      }
+        
+
+    }
+
+    return 0;
+}
+```
