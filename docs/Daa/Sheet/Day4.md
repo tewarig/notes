@@ -102,3 +102,37 @@ int main(){
     }
 }
 ```
+
+# Hoare 's Partation
+```cpp
+#include<iostream>
+using namespace std;
+
+
+int partation(int arr[],int start,int end){
+  int pivot = arr[end - 1];
+  int lastOccurance = start- 1;
+  for(int index = start; index<end ;index++){
+      if(arr[index]<pivot){
+          lastOccurance++;
+        //   cout<<arr[index]<<" ";
+          swap(arr[lastOccurance],arr[index]);
+      }
+  }
+  swap(arr[lastOccurance+1],arr[end - 1]);
+   
+}
+int main(){
+    
+    int arrSize ;
+    cin>>arrSize;
+    int arr[arrSize];
+    for(int i=0;i<arrSize;i++){
+        cin>>arr[i];
+    }
+    partation(arr,0,arrSize);
+    for(int i=0;i<arrSize;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+```
