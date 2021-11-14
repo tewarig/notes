@@ -136,3 +136,51 @@ int main(){
     }
 }
 ```
+
+
+# Quick Sort 
+```cpp
+#include<iostream>
+using namespace std;
+
+        
+
+int partation(int arr[],int start,int end){
+  int pivot = arr[end - 1];
+  int lastOccurance = start- 1;
+  for(int index = start; index<end ;index++){
+      if(arr[index]<pivot){
+          lastOccurance++;
+        //   cout<<arr[index]<<" ";
+          swap(arr[lastOccurance],arr[index]);
+      }
+  }
+  swap(arr[lastOccurance+1],arr[end - 1]);
+  return lastOccurance+1;
+
+}
+
+void quickSort(int arr[],int start,int end){
+    if(start<end){
+        int p  = partation(arr,start,end);
+        quickSort(arr,start,p);
+        quickSort(arr,p+1,end);
+    }
+    
+}
+
+int main(){
+    
+    int arrSize ;
+    cin>>arrSize;
+    int arr[arrSize];
+    for(int i=0;i<arrSize;i++){
+        cin>>arr[i];
+    }
+    // partation(arr,0,arrSize);
+    quickSort(arr,0,arrSize);
+    for(int i=0;i<arrSize;i++){
+        cout<<arr[i]<<" ";
+    }
+}
+```
