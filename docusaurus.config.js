@@ -7,7 +7,7 @@ module.exports = {
   tagline: 'A complete collection of notes by me :)',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'ignore',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.png',
   organizationName: 'facebook', // Usually your GitHub org/user name.
